@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bottom_bar_normal_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topbarlayout_mine"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#E22255" >
+        <TextView 
+            android:id="@+id/nickname_mine"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:text="我的"
+	        android:textColor="#ffffff"
+	        android:textSize="18sp"
+	        android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:background="@color/common_bottom_bar_normal_bg" /> -->
+
+            <RelativeLayout
+                android:id="@+id/head_rl"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:background="@color/common_content_bg" >
+
+                <com.gzqining.inthegarden.util.CircleImageView
+                        android:id="@+id/head_mine"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"/>
+                
+                <FrameLayout
+                    android:id="@+id/framelayout_mine"
+                    android:layout_width="94dp"
+                    android:layout_height="94dp"
+                    android:padding="10dp"
+                    android:layout_centerInParent="true" 
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/head_mine02"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/head_img02" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/layermask" />
+                    
+                </FrameLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:background="@color/common_bottom_bar_normal_bg" />
+			<LinearLayout 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="@color/common_content_bg"
+			    android:orientation="vertical"
+			    >
+            <RelativeLayout
+                android:id="@+id/wallet_mine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_content_bg"
+                android:padding="10dp" >
+				<RelativeLayout
+				    android:id="@+id/relativelayout1"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                     >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wallet_ic" />
+
+                    
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/relativelayout1"
+                    android:layout_marginLeft="8dp"
+                    android:text="钱包"
+                    android:textColor="#BBBBBB"
+                    android:textSize="@dimen/mine_text" />
+
+                <ImageView
+                    android:id="@+id/nickname_to"
+                    android:layout_width="9dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/to_right" />
+                
+                
+            </RelativeLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/common_bottom_bar_normal_bg" />
+            <RelativeLayout
+                android:id="@+id/vip_mine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_content_bg"
+                android:padding="10dp" >
+				<RelativeLayout
+				    android:id="@+id/relativelayout2"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                     >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/vip_ic" />
+                    
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/relativelayout2"
+                    android:layout_marginLeft="8dp"
+                    android:text="VIP"
+                    android:textColor="#BBBBBB"
+                    android:textSize="@dimen/mine_text" />
+
+                <ImageView
+                    android:layout_width="9dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/to_right" />
+                
+            </RelativeLayout>
+			</LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:background="@color/common_bottom_bar_normal_bg" />
+			<LinearLayout 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="@color/common_content_bg"
+			    android:orientation="vertical"
+			    >
+            <RelativeLayout
+                android:id="@+id/relation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_content_bg"
+                android:padding="10dp" >
+				<RelativeLayout
+				    android:id="@+id/relativelayout4"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                     >
+
+                    <ImageView
+                        android:id="@+id/relation_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/relation_ic" />
+
+                    
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/relativelayout4"
+                    android:layout_marginLeft="8dp"
+                    android:text="关系"
+                    android:textColor="#BBBBBB"
+                    android:textSize="@dimen/mine_text" />
+
+                <ImageView
+                    android:id="@+id/relation_to"
+                    android:layout_width="9dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/to_right" />
+                
+                
+            </RelativeLayout>
+			
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/common_bottom_bar_normal_bg" />
+
+            <RelativeLayout
+                android:id="@+id/setup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_content_bg"
+                android:padding="10dp" >
+				<RelativeLayout
+				    android:id="@+id/relativelayout5"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                     >
+
+                    <ImageView
+                        android:id="@+id/setup_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/setup" />
+
+                    
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/relativelayout5"
+                    android:layout_marginLeft="8dp"
+                    android:text="设置"
+                    android:textColor="#BBBBBB"
+                    android:textSize="@dimen/mine_text" />
+
+                <ImageView
+                    android:id="@+id/setup_to"
+                    android:layout_width="9dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/to_right" />
+                
+                
+            </RelativeLayout>
+			</LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:background="@color/common_bottom_bar_normal_bg" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

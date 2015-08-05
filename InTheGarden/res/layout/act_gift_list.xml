@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bottom_bar_normal_bg"
+    android:orientation="vertical" >
+    <com.gzqining.inthegarden.common.TopBarLayout
+        android:id="@+id/topbarlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        title="虚拟礼物" >
+
+        <ImageButton
+            android:id="@+id/top_layout_gift_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/back_btn" />
+    </com.gzqining.inthegarden.common.TopBarLayout>
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="3dip"
+        >
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/gift_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:clipChildren="true"
+        android:gravity="center"
+        android:horizontalSpacing="0dip"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="2"
+        android:verticalSpacing="0dip"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrHeaderBackground="@null"
+        ptr:ptrHeaderSubTextColor="#ffffff"
+        ptr:ptrHeaderTextColor="#ffffff"
+        ptr:ptrListViewExtrasEnabled="false"
+        ptr:ptrMode="both"
+        ptr:ptrRefreshableViewBackground="@null"
+        ptr:ptrScrollingWhileRefreshingEnabled="true"
+        android:visibility="visible" >
+        <!-- 刷新箭头显示，设置则在页面内有显示 -->
+        <!-- ptr:ptrShowIndicator="true" -->
+    </com.handmark.pulltorefresh.library.PullToRefreshGridView> 
+    <!-- <ImageView 
+        android:id="@+id/image_no_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:src="@drawable/nophoto"
+        android:visibility="gone" />  --> 
+    </FrameLayout>
+</LinearLayout>

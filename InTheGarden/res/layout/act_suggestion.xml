@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bottom_bar_normal_bg"
+    android:orientation="vertical" >
+    <com.gzqining.inthegarden.common.TopBarLayout
+        android:id="@+id/topbarlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        title="意见反馈" >
+
+        <ImageButton
+            android:id="@+id/top_layout_suggestion_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:padding="10dp"
+            android:src="@drawable/back_btn" />
+        <Button
+            android:id="@+id/top_layout_suggestion_right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:text="发送"
+            android:textColor="#DDDDDD"
+            android:textSize="18sp" />
+    </com.gzqining.inthegarden.common.TopBarLayout>
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="30dp"
+	        android:layout_toLeftOf="@id/head_to" >
+	
+	        <EditText 
+	            android:id="@+id/suggestion_edt"
+			    android:layout_width="match_parent"
+		        android:layout_height="150dp"
+		        android:background="#444444"
+		        android:padding="10dp"
+		        android:gravity="top"
+		        android:textColor="#DDDDDD"
+		    />
+	
+	    </RelativeLayout>
+</LinearLayout>

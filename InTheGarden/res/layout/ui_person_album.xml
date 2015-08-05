@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bottom_bar_normal_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/top_title_bg" >
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/back_btn" />
+
+        <LinearLayout
+            android:id="@+id/item1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/center_view"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/itemLabel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="相册"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/common_layout_topbarlayout_title_size" />
+
+            <View
+                android:id="@+id/itemLine1"
+                android:layout_width="22dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="#FFFFFF" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/center_view"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:id="@+id/item2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/center_view"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/itemLabel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="私密"
+                android:textColor="#F3A7BB"
+                android:textSize="@dimen/common_layout_topbarlayout_title_size" />
+
+            <View
+                android:id="@+id/itemLine2"
+                android:layout_width="22dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="#FFFFFF"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="上传"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbarlayout" />
+
+</RelativeLayout>

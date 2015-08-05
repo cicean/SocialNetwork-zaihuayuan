@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bottom_bar_normal_bg"
+    android:orientation="vertical" >
+
+    <com.gzqining.inthegarden.common.TopBarLayout
+        android:id="@+id/topbarlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        title="支付方式" >
+
+        <ImageButton
+            android:id="@+id/top_layout_pay_money_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="15dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/back_btn" />
+
+        <Button
+            android:id="@+id/top_layout_save_payway_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingLeft="15dp"
+            android:paddingRight="18dp"
+            android:text="保存"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </com.gzqining.inthegarden.common.TopBarLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:background="@color/common_bottom_bar_normal_bg" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/common_content_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/remaining_sum_wallet"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_content_bg"
+            android:padding="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/relativelayout1"
+                android:layout_width="35dp"
+                android:layout_height="35dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/zfb_icon" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/relativelayout1"
+                android:text="支付宝"
+                android:textColor="#BBBBBB"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/selected_pay_way"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/bank_selected_ic" />
+        </RelativeLayout>
+        <!--
+               <View
+              android:layout_width="fill_parent"
+              android:layout_height="1dp"
+              android:layout_marginLeft="12dp"
+              android:layout_marginRight="10dp"
+              android:background="@color/common_bottom_bar_normal_bg" />
+        -->
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bottom_bar_normal_bg"
+    android:orientation="vertical" >
+
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbarlayout"
+        android:cacheColorHint="@android:color/transparent"
+        android:clipChildren="true"
+        android:gravity="center"
+        android:horizontalSpacing="3dip"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="1dip"
+        android:visibility="visible"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrHeaderBackground="@null"
+        ptr:ptrHeaderSubTextColor="#ffffff"
+        ptr:ptrHeaderTextColor="#ffffff"
+        ptr:ptrListViewExtrasEnabled="false"
+        ptr:ptrMode="both"
+        ptr:ptrRefreshableViewBackground="@null"
+        ptr:ptrScrollingWhileRefreshingEnabled="true" >
+    </com.handmark.pulltorefresh.library.PullToRefreshGridView>
+
+    <TextView
+        android:id="@+id/nodata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:text="暂无上传相片哦"
+        android:textColor="#BBBBBB"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

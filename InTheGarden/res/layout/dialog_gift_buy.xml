@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_gift_by_ll"
+    android:layout_width="240dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gift_dialog_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        >
+        <ImageView 
+            android:id="@+id/gift_dialog_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/dialog_cancel"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="赠送礼物"
+            android:textColor="#545454"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+	<View
+	    android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BBBBBB"
+	    />
+	
+	<RelativeLayout
+        android:background="#eeeeee"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_margin="15dp" >
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/dialog_gift_img"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:src="@drawable/logo" />
+    </RelativeLayout>
+	
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:layout_gravity="center"
+	    android:background="#000000"
+	    >
+		<LinearLayout 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:layout_gravity="center"
+		    android:padding="5dp"
+		    android:background="#ffffff"
+		    android:layout_marginBottom="1dp"
+		    >
+		    <Button 
+		        android:id="@+id/reduce_dialog"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/dialog_reduce_gift"
+		        />
+		    <TextView 
+		        android:id="@+id/gift_number_dialog"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="15dp"
+		        android:text="1"
+		        android:textColor="#000000"
+		        android:textSize="18sp"
+		        />
+		    <Button 
+		        android:id="@+id/add_dialog"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="15dp"
+		        android:background="@drawable/dialog_add_gift"
+		        />
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginTop="10dp"
+	    android:layout_gravity="center"
+	    >
+	    
+	    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥"
+            android:textColor="#f0b500"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/dialog_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="0.00"
+            android:textColor="#f0b500"
+            android:textSize="20sp" />
+	</LinearLayout>
+	<Button 
+	    android:id="@+id/paymoney_dialog_buy"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:padding="10dp"
+	    android:layout_margin="20dp"
+	    android:text="立即付款"
+	    android:textColor="#ffffff"
+	    android:textSize="18sp"
+	    android:background="@drawable/login_bt_bg"
+	    />
+</LinearLayout>

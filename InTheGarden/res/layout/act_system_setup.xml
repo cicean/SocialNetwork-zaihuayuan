@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:orientation="vertical" >
+
+    <com.gzqining.inthegarden.common.TopBarLayout
+        android:id="@+id/topbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        title="系统设置" >
+
+        <ImageButton
+            android:id="@+id/top_layout_systemsetup_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/back_btn" />
+    </com.gzqining.inthegarden.common.TopBarLayout>
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/news_setup_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_content_bg"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="消息设置"
+                    android:textColor="#BBBBBB"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/to_right" />
+                
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#777777" />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#777777" />
+
+            <RelativeLayout
+                android:id="@+id/about_inthegarden_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_content_bg"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="关于在花园"
+                    android:textColor="#BBBBBB"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="9dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/to_right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#777777" />
+            <RelativeLayout
+                android:id="@+id/suggestion_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_content_bg"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="意见反馈"
+                    android:textColor="#BBBBBB"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="9dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/to_right" />
+                
+            </RelativeLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dp"
+                android:background="#777777" />
+			<View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:background="@color/common_content_bg" />
+            <Button
+		        android:id="@+id/secede_login_btn"
+		        android:layout_width="match_parent"
+		        android:layout_height="45dp"
+		        android:layout_marginLeft="16dp"
+		        android:layout_marginRight="16dp"
+		        android:background="@drawable/login_bt_bg"
+		        android:text="退出登录"
+		        android:textColor="#ffffff" /></LinearLayout>
+    </ScrollView>
+	<RelativeLayout 
+	    android:id="@+id/menu_system_setup_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+	    >
+        <Button 
+	        android:id="@+id/secede_account_number_btn"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:layout_marginLeft="8dp"
+        	android:layout_marginRight="8dp"
+	        android:layout_below="@+id/line_mine2"
+	        android:background="@drawable/login_cancel_bg"
+	        android:gravity="center"
+	        android:textColor="#E51C52"
+	        android:text="退出账号" />
+	    <Button 
+	        android:id="@+id/cancel_system_setup"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:layout_marginLeft="8dp"
+        	android:layout_marginRight="8dp"
+	        android:layout_below="@+id/secede_account_number_btn"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginBottom="12dp"
+	        android:background="@drawable/login_cancel_bg"
+	        android:gravity="center"
+	        android:textColor="#E51C52"
+	        android:text="取消" />
+	</RelativeLayout>
+</LinearLayout>

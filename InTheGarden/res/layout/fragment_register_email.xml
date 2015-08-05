@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:XListView="http://schemas.android.com/apk/res/com.gzqining.inthegarden"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:orientation="vertical" >
+
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_inputbox_bg" >
+
+        <ImageView
+            android:id="@+id/iv_password1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/email_logo" />
+
+        <EditText
+            android:id="@+id/email_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:layout_toRightOf="@id/iv_password1"
+            android:background="@drawable/login_inputbox_bg"
+            android:text="13226513979@sina.cn"
+            android:hint="请输入邮箱号码"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_inputbox_bg" >
+
+        <ImageView
+            android:id="@+id/iv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/login_password" />
+
+        <EditText
+            android:id="@+id/password_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dip"
+            android:layout_toRightOf="@id/iv_password"
+            android:background="@drawable/login_inputbox_bg"
+            android:hint="@string/user_pw"
+            android:inputType="textPassword"
+            android:text="123456"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/confirm_email_register"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_bt_bg"
+        android:text="确定"
+        android:textColor="#ffffff" />
+	<LinearLayout
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp" >
+        <FrameLayout
+            android:id="@+id/check_email_fl"
+            android:layout_width="wrap_content"
+       		android:layout_height="wrap_content" >
+	        <ImageView
+		        android:layout_width="wrap_content"
+	       		android:layout_height="wrap_content"
+		        android:id="@+id/check_email_img_normal"
+		        android:layout_marginTop="2dp"
+		        android:src="@drawable/check_bg_normal"
+		        android:visibility="invisible"
+		        android:textColor="#FFFFFF" />
+	        <ImageView
+		        android:layout_width="wrap_content"
+	       		android:layout_height="wrap_content"
+		        android:id="@+id/check_email_img_selected"
+		        android:layout_marginTop="2dp"
+		        android:src="@drawable/check_bg_selected"
+		        android:textColor="#FFFFFF" />
+        </FrameLayout>
+	    <TextView
+	        android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+	        android:id="@+id/check_email"
+	        android:layout_marginLeft="5dp"
+	        android:text="用户协议"
+	        android:textSize="16dp"
+	        android:textColor="#FFFFFF" />
+	</LinearLayout>
+</LinearLayout>

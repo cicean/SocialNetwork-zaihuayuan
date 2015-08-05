@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:XListView="http://schemas.android.com/apk/res/com.gzqining.inthegarden"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:orientation="vertical" >
+
+    <com.gzqining.inthegarden.common.TopBarLayout
+        android:id="@+id/topbarlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        title="手机找回密码" >
+        <ImageButton
+            android:id="@+id/top_layout_phonespw_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/back_btn" />
+    </com.gzqining.inthegarden.common.TopBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_inputbox_bg" >
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/phone_logo" />
+
+        <EditText
+            android:id="@+id/phoneNumber_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:layout_toRightOf="@id/iv_phone"
+            android:background="@drawable/login_inputbox_bg"
+            android:hint="请输入手机号码"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:background="@drawable/login_inputbox_bg" >
+		<EditText
+            android:id="@+id/picture_cord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="11dip"
+            android:layout_weight="0.3"
+            android:background="@drawable/login_inputbox_bg"
+            android:ems="10"
+            android:hint="请输入验证码"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" >
+        </EditText>
+        <ImageView
+            android:id="@+id/cord_img_phone"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="0.7"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            android:src="@drawable/login_password" />
+    </LinearLayout>
+	<RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="45dp"
+	        android:layout_marginLeft="16dp"
+	        android:layout_marginRight="16dp"
+	        android:layout_marginTop="15dp"
+	        android:background="@drawable/login_inputbox_bg" >
+	
+	        <!-- <ImageView
+	            android:id="@+id/iv_idCord_spw"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="10dp"
+	            android:src="@drawable/idcode" /> -->
+	
+	        <EditText
+	            android:id="@+id/IDCord_spw"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="16dip"
+	            android:background="@drawable/login_inputbox_bg"
+	            android:hint="请输入验证码"
+	            android:singleLine="true"
+	            android:textColor="#FFFFFF"
+	            android:textSize="18sp" />
+	        <Button
+		        android:id="@+id/get_idCord_spw"
+		        android:layout_width="wrap_content"
+		        android:layout_height="45dp"
+		        android:background="@drawable/idcord_bt_bg"
+		        android:layout_alignParentRight="true"
+		        android:padding="6dp"
+		        android:text="获取验证码"
+		        android:textSize="16sp"
+		        android:textColor="#ffffff" />
+	    </RelativeLayout>
+    <Button
+        android:id="@+id/confirm_phonespw"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_bt_bg"
+        android:text="确定"
+        android:textColor="#ffffff" />
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <io.rong.imkit.view.ActionBar
+        android:id="@id/rc_actionbar"
+        style="@style/RcTheme.ActionBar" >
+    </io.rong.imkit.view.ActionBar>
+
+    <LinearLayout
+        android:id="@+id/chat_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rc_actionbar"
+        android:orientation="vertical" >
+
+        <fragment
+            android:name="io.rong.imkit.fragment.ConversationFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rc_actionbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gift_info_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rc_actionbar"
+        android:background="#2F2F37"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/receive_gift_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="#FFCC00" >
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+    </LinearLayout>
+
+    <!-- <Button
+        android:id="@+id/send_gift_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/im_send_gift_icon" /> -->
+
+    <View
+        android:id="@+id/center_view"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#00000000" />
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:XListView="http://schemas.android.com/apk/res/com.gzqining.inthegarden"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:orientation="vertical" >
+    
+    <com.gzqining.inthegarden.common.TopBarLayout
+        android:id="@+id/topbarlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        title="世界" >
+
+    </com.gzqining.inthegarden.common.TopBarLayout>
+    <com.gzqining.inthegarden.waterflow.XListView
+        android:id="@+id/world_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        XListView:plaColumnNumber="1"
+        android:scrollbars="vertical"
+        android:visibility="visible" />
+    <ImageView 
+        android:id="@+id/image_no_world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:src="@drawable/noactivity"
+        android:visibility="gone" />
+</LinearLayout>

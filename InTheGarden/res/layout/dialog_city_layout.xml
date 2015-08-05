@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#444444" >
+
+    <RelativeLayout 
+        android:layout_height="50dp"
+    	android:layout_width="match_parent"
+    	android:background="#E22255"
+        >
+        <Button 
+            android:id="@+id/quxiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:text="取消"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            />
+        <TextView 
+            android:id="@+id/title_choise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:text="出生地"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            />
+        <Button 
+            android:id="@+id/queding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:text="确定"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_wheel_views"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_1"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <com.gzqining.inthegarden.WheelView.WheelView
+            android:id="@+id/wv_province"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.gzqining.inthegarden.WheelView.WheelView
+            android:id="@+id/wv_city"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <!-- <com.gzqining.inthegarden.WheelView.WheelView
+            android:id="@+id/wv_area"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" /> -->
+    </LinearLayout>
+
+</LinearLayout>

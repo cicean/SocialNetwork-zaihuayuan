@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/gift_dialog_bg"
+        android:orientation="vertical"
+        android:paddingBottom="20dp" >
+
+        <RelativeLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="确认提现"
+                android:textColor="#555555"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:src="@drawable/dialog_cancel" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#888888" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="¥3000.00"
+            android:textColor="#FFBF00"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/bankCardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <TextView
+                android:id="@+id/bid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提现至建设银行（尾号7000）"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/btnGenhuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="更换"
+                android:textColor="#FF8000"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSumbit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/login_bt_bg"
+            android:padding="10dp"
+            android:text="确认提现"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/textSumbit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="提现申请已提交"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/textMsg1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="预计到账时间: 2015-07-10 23:59"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/textMsg2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="提现至建设银行（尾号7000）"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btnComplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/login_bt_bg"
+            android:padding="10dp"
+            android:text="完成"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
+</FrameLayout>

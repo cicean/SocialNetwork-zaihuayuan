@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gift_dialog_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp" >
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="买断详情"
+            android:textColor="#545454"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/gift_dialog_cancel_get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/dialog_cancel" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BBBBBB" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imageView_userhead"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_margin="10dip"
+            android:src="@drawable/username_edit_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="--"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView_user_remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"
+                android:textColor="#ff888888" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="#BBBBBB" />
+
+    <TextView
+        android:id="@+id/textView_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="5dip"
+        android:text="时间：--"
+        android:textColor="#bbbbbb" />
+
+    <TextView
+        android:id="@+id/textView_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="5dip"
+        android:text="留言：--"
+        android:textColor="#bbbbbb" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="5dip"
+            android:text="礼物："
+            android:textColor="#bbbbbb" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffeeeeee"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/dialog_gift_img_get"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:src="@drawable/logo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffbbbbbb"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/gift_name_get"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="--"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/dialog_price_get_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="--"
+                        android:textColor="#E51C52"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:text="状态："
+            android:textColor="#bbbbbb" />
+
+        <TextView
+            android:id="@+id/dialog_zhuangtai_get_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="--"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:background="#BBBBBB" />
+
+    <Button
+        android:id="@+id/buttonState"
+        android:layout_width="200dip"
+        android:layout_height="40dip"
+        android:layout_marginTop="10dip"
+        android:layout_gravity="center_horizontal"
+        android:background="#bbbbbb"
+        android:text="已接受"
+        android:layout_marginBottom="10dip"
+         android:textSize="20sp"
+        android:textColor="#ffffff" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCancle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/buttonReject"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="#bbbbbb"
+                android:padding="10dip"
+                android:text="拒绝买断"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/buttonAccept"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/join_btn"
+                android:padding="10dip"
+                android:text="接受买断"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

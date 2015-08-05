@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    android:orientation="vertical" >
+    <com.gzqining.inthegarden.common.TopBarLayout
+        android:id="@+id/topbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        title="关于" >
+
+        <ImageButton
+            android:id="@+id/top_layout_about_inthegarden_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/back_btn" />
+    </com.gzqining.inthegarden.common.TopBarLayout>
+        
+        <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/logo"
+        />
+	
+	<!-- <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="15dp"
+        android:background="#e9e9e9" /> -->
+        <LinearLayout 
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#444444"
+            >
+	<RelativeLayout
+	    android:id="@+id/rule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:background="#444444"
+        android:padding="10dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="#444444"
+            android:layout_marginLeft="10dp"
+            android:text="用户协议"
+            android:textColor="#DDDDDD"
+            android:textSize="18sp"
+            android:typeface="serif" />
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:background="@drawable/to_right_black"
+             android:layout_alignParentRight="true" />
+	
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:background="#333333" />
+    <RelativeLayout
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#444444"
+        android:padding="10dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            
+            android:layout_marginLeft="10dp"
+            android:text="检查更新"
+            android:textColor="#DDDDDD"
+            android:textSize="18sp"
+            android:typeface="serif" />
+        <TextView 
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_toLeftOf="@+id/toright"
+	        android:layout_marginRight="10dp"
+	        android:text="v1.0.2"
+	        android:textColor="#DDDDDD"
+	        android:textSize="18sp"
+	    />
+         <ImageView
+             android:id="@+id/toright"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:background="@drawable/to_right_black"
+             android:layout_alignParentRight="true" />
+	
+    </RelativeLayout>
+    </LinearLayout>
+    <!-- <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#e9e9e9" /> -->
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        >
+	    <TextView 
+	        android:id="@+id/bottom"
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="30dp"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:text="宽向互联网科有限技公司 版权所有"
+	        android:textColor="#444444"
+	        android:textSize="16dp"/>
+    </RelativeLayout>
+</LinearLayout>

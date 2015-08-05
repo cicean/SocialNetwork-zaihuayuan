@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:XListView="http://schemas.android.com/apk/res/com.gzqining.inthegarden"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:orientation="vertical" >
+
+    <com.gzqining.inthegarden.common.TopBarLayout
+        android:id="@+id/topbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        title="登录" >
+        <ImageButton
+            android:id="@+id/top_layout_login_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/back_btn" />
+    </com.gzqining.inthegarden.common.TopBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_inputbox_bg" >
+
+        <ImageView
+            android:id="@+id/iv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/login_name" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:layout_toRightOf="@id/iv_username"
+            android:background="@drawable/login_inputbox_bg"
+            android:hint="@string/user_name"
+            android:singleLine="true"
+            android:textColor="#dddddd"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_inputbox_bg" >
+
+        <ImageView
+            android:id="@+id/iv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/login_password" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dip"
+            android:layout_toRightOf="@id/iv_password"
+            android:background="@drawable/login_inputbox_bg"
+            android:hint="@string/user_pw"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="#dddddd"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/login_bt"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_bt_bg"
+        android:text="登录"
+        android:textColor="#ffffff" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="8dp"
+        android:background="#444444" >
+
+        <Button
+            android:id="@+id/forgetPW_bt"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:background="#444444"
+            android:text="忘记密码？"
+            android:textColor="#dddddd" />
+    </RelativeLayout>
+	<RelativeLayout 
+	    android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+	    >
+        <Button 
+	        android:id="@+id/phonespw"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:layout_marginLeft="8dp"
+        	android:layout_marginRight="8dp"
+	        android:background="@drawable/login_phonespw_bg"
+	        android:gravity="center"
+	        android:textColor="#000000"
+	        android:text="手机找回密码" />
+        <View 
+            android:id="@+id/line"
+            android:background="#666666"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+        	android:layout_marginRight="8dp"
+            android:layout_below="@+id/phonespw"
+            />
+        <Button 
+	        android:id="@+id/emailspw"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:layout_marginLeft="8dp"
+        	android:layout_marginRight="8dp"
+	        android:layout_below="@+id/line"
+	        android:background="@drawable/login_emailspw_bg"
+	        android:gravity="center"
+	        android:textColor="#000000"
+	        android:text="邮箱找回密码" />
+	    <Button 
+	        android:id="@+id/cancel_login"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:layout_marginLeft="8dp"
+        	android:layout_marginRight="8dp"
+	        android:layout_below="@+id/emailspw"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginBottom="12dp"
+	        android:background="@drawable/login_cancel_bg"
+	        android:gravity="center"
+	        android:textColor="#000000"
+	        android:text="取消" />
+	</RelativeLayout>
+</LinearLayout>

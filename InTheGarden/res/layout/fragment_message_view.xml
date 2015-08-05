@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:orientation="vertical" >
+
+    <com.gzqining.inthegarden.common.TopBarLayout
+        android:id="@+id/topbarlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        title="消息" >
+    </com.gzqining.inthegarden.common.TopBarLayout>
+
+    <fragment
+        android:name="io.rong.imkit.fragment.ConversationListFragment"
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent"
+         />
+
+</LinearLayout>

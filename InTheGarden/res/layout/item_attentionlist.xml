@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="98dp"
+    android:background="@color/common_content_bg" >
+    
+    <FrameLayout 
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:padding="10dp">
+        
+        <ImageView 
+            android:id="@+id/head_attention_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/head_img02"/>
+        
+        <ImageView 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/layermask"/>
+        
+    </FrameLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp">
+        
+        <TextView 
+            android:id="@+id/name_attention_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#DDDDDD"
+            android:textSize="16sp"
+            android:text="Alexa"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxLength="10" />
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10dp">
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/distance_icon"/>
+            <TextView 
+                android:id="@+id/distance_attention_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#171717"
+                android:textSize="10sp"
+                android:text="0.06km"
+                android:layout_marginLeft="5dp"/>
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/time_icon"
+                android:layout_marginLeft="10dp"/>
+            <TextView 
+                android:id="@+id/time_attention_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#171717"
+                android:textSize="10sp"
+                android:text="30分钟前"
+                android:layout_marginLeft="5dp"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <ImageView 
+                android:id="@+id/sex_attention_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/woman_icon"/>
+            
+            <TextView 
+                android:id="@+id/age_attention_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#BABABA"
+                android:textSize="12sp"
+                android:text="22岁"
+                android:layout_marginLeft="5dp"/>
+            
+            <TextView 
+                android:id="@+id/height_attention_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#BABABA"
+                android:textSize="12sp"
+                android:text="165cm"
+                android:layout_marginLeft="5dp"/>
+            
+            <TextView 
+                android:id="@+id/weight_attention_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#BABABA"
+                android:textSize="12sp"
+                android:text="52kg"
+                android:layout_marginLeft="5dp"/>
+            
+        </LinearLayout>
+        
+        <TextView 
+            android:id="@+id/sign_attention_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#BBBBBB"
+            android:textSize="13sp"
+            android:text="迷失在远行的季节~"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"/>
+        
+        <View 
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#333333"
+            android:layout_alignParentBottom="true"/>
+        
+    </RelativeLayout>
+    
+
+</LinearLayout>

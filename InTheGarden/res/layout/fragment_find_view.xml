@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:XListView="http://schemas.android.com/apk/res/com.gzqining.inthegarden"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_content_bg" >
+    
+	
+    <com.gzqining.inthegarden.common.TopBarLayout
+        android:id="@+id/topbarlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        title="寻觅" >
+        <ImageView 
+            android:id="@+id/search_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_add"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            />
+    </com.gzqining.inthegarden.common.TopBarLayout>
+    
+    <com.gzqining.inthegarden.waterflow.XListView
+        android:id="@+id/people_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        XListView:plaColumnNumber="1"
+        android:fastScrollEnabled="true"
+        android:layout_below="@+id/topbarlayout"
+        android:scrollbars="vertical"
+        android:visibility="visible" />
+    <ImageView 
+        android:id="@+id/image_no_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_weight="1"
+        android:src="@drawable/nousers"
+        android:visibility="gone" />
+    <LinearLayout 
+        android:id="@+id/find_add_ll"
+        android:layout_width="100dp"
+        android:layout_height="92dp"
+        android:layout_below="@+id/topbarlayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/find_add_bg"
+        android:visibility="invisible"
+        android:orientation="vertical"
+        >
+        <LinearLayout 
+            android:id="@+id/find_distence_ll"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center"
+        	android:layout_marginTop="15dp"
+        	android:orientation="horizontal">
+        	<ImageView 
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:layout_marginTop="2dp"
+        	    android:src="@drawable/distance_find_icon"/>
+        	<TextView 
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:layout_marginLeft="15dp"
+        	    android:text="距离"
+        	    android:textSize="18dp"
+        	    android:textColor="#ffffff"
+        	    />
+        </LinearLayout>
+        <View 
+            android:background="#66bbbbbb"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:layout_marginTop="10dp"
+            />
+        <LinearLayout 
+            android:id="@+id/find_hot_ll"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center"
+        	android:layout_marginTop="10dp"
+        	android:orientation="horizontal">
+        	<ImageView 
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:layout_marginTop="2dp"
+        	    android:src="@drawable/hot_icon"/>
+        	<TextView 
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:layout_marginLeft="15dp"
+        	    android:text="热度"
+        	    android:textSize="18dp"
+        	    android:textColor="#ffffff"
+        	    />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

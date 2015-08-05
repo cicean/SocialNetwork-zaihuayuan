@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bottom_bar_normal_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topbarlayout_mine"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#E22255" >
+        <ImageButton
+            android:id="@+id/top_layout_wallet_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="15dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/back_btn" />
+        <TextView 
+            android:id="@+id/nickname_mine"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:text="钱包"
+	        android:textColor="#ffffff"
+	        android:textSize="18sp"
+	        android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:background="@color/common_bottom_bar_normal_bg" /> -->
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:background="@color/common_bottom_bar_normal_bg" />
+			<LinearLayout 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="@color/common_content_bg"
+			    android:orientation="vertical"
+			    >
+            <RelativeLayout
+                android:id="@+id/remaining_sum_wallet"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_content_bg"
+                android:padding="10dp" >
+				<RelativeLayout
+				    android:id="@+id/relativelayout1"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                     >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/remaining_sum_ic" />
+
+                    
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/relativelayout1"
+                    android:layout_marginLeft="8dp"
+                    android:text="余额"
+                    android:textColor="#BBBBBB"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/nickname_to"
+                    android:layout_width="9dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/to_right" />
+                
+                
+            </RelativeLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/common_bottom_bar_normal_bg" />
+            <RelativeLayout
+                android:id="@+id/withdraw_deposit_wallet"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_content_bg"
+                android:padding="10dp" >
+				<RelativeLayout
+				    android:id="@+id/relativelayout2"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                     >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/withdraw_deposit_ic" />
+                    
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/relativelayout2"
+                    android:layout_marginLeft="8dp"
+                    android:text="提现方式"
+                    android:textColor="#BBBBBB"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="9dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/to_right" />
+                
+            </RelativeLayout>
+			</LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:background="@color/common_bottom_bar_normal_bg" />
+			<LinearLayout 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="@color/common_content_bg"
+			    android:orientation="vertical"
+			    >
+            <RelativeLayout
+                android:id="@+id/paymentpay_wallet"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_content_bg"
+                android:padding="10dp" >
+				<RelativeLayout
+				    android:id="@+id/relativelayout4"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                     >
+
+                    <ImageView
+                        android:id="@+id/relation_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/paymentpay_ic" />
+
+                    
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/relativelayout4"
+                    android:layout_marginLeft="8dp"
+                    android:text="支付方式"
+                    android:textColor="#BBBBBB"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/relation_to"
+                    android:layout_width="9dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/to_right" />
+                
+                
+            </RelativeLayout>
+			
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/common_bottom_bar_normal_bg" />
+
+            <RelativeLayout
+                android:id="@+id/present_wallet"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_content_bg"
+                android:padding="10dp" >
+				<RelativeLayout
+				    android:id="@+id/relativelayout5"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                     >
+
+                    <ImageView
+                        android:id="@+id/setup_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/present_ic" />
+
+                    
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/relativelayout5"
+                    android:layout_marginLeft="8dp"
+                    android:text="礼物"
+                    android:textColor="#BBBBBB"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/setup_to"
+                    android:layout_width="9dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/to_right" />
+                
+                
+            </RelativeLayout>
+			</LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:background="@color/common_bottom_bar_normal_bg" />
+        	<RelativeLayout
+                android:id="@+id/buy_out_wallet"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_content_bg"
+                android:padding="10dp" >
+				<RelativeLayout
+				    android:id="@+id/relativelayout6"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                     >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/buy_out_ic" />
+
+                    
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/relativelayout6"
+                    android:layout_marginLeft="8dp"
+                    android:text="买断"
+                    android:textColor="#BBBBBB"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="9dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/to_right" />
+                
+                
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

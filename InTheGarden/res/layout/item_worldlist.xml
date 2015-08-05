@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:paddingBottom="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/world_item_bg" >
+        <FrameLayout 
+            android:id="@+id/fl123"
+	        android:layout_width="match_parent"
+	        
+	        android:layout_height="162dp">
+	        
+	        <ImageView
+	            android:id="@+id/act_img_world"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:scaleType="fitXY"
+	            android:src="@drawable/act01" />
+	        
+	        <ImageView 
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:src="@drawable/world_r1_kk"/>
+        
+    	</FrameLayout>
+        
+        <TextView 
+            android:id="@+id/article_title"
+		    android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fl123"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
+            android:text="迪拜七日旅游攻略"
+            android:textSize="20dp"
+            android:singleLine="true"
+		    android:textColor="#ffffff"/>
+		<TextView 
+		    android:id="@+id/article"
+		    android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="15dp"
+            android:layout_below="@+id/article_title"
+            android:maxLines="2"
+            android:text="领略异地风光，享受纸醉金迷之旅领略异地风光，享受纸醉金迷之旅领略异地风光，享领略异地风光，享受纸醉金迷之旅领略异地风光，享受纸醉金迷之旅领略异地风光，享领略异地风光，享受纸醉金迷之旅领略异地风光，享受纸醉金迷之旅领略异地风光，享领略异地风光，享受纸醉金迷之旅领略异地风光，享受纸醉金迷之旅领略异地风光。"
+		    android:textColor="#bbbbbb"/>
+    </RelativeLayout>
+	
+
+</RelativeLayout>

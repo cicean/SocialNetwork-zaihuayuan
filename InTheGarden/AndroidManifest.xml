@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gzqining.inthegarden"
+    android:versionCode="1"
+    android:versionName="1.5" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="23" />
+
+    <!-- Required -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+
+    <application
+        android:name="com.gzqining.inthegarden.common.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+
+        <!-- android:name="com.gzqining.inthegarden.common.App" -->
+        <!-- 启动页 -->
+        <activity android:name="com.gzqining.inthegarden.act.WelcomeActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 壳子 -->
+        <activity
+            android:name="com.gzqining.inthegarden.app.UIShellActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.gzqining.inthegarden.app.ui.WithdrawTixianActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.gzqining.inthegarden.app.ui.UISpecificInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- 登录 -->
+        <activity android:name="com.gzqining.inthegarden.act.LoginActivity" />
+        <!-- 主页 -->
+        <activity android:name="com.gzqining.inthegarden.act.MainActivity" />
+        <!-- 手机找回密码 -->
+        <activity android:name="com.gzqining.inthegarden.act.PhoneSpwActivity" >
+        </activity>
+        <!-- 邮箱找回密码 -->
+        <activity android:name="com.gzqining.inthegarden.act.EmailSpwActivity" >
+        </activity>
+        <!-- 世界详情 -->
+        <activity android:name="com.gzqining.inthegarden.act.WorldSpecificActivity" >
+        </activity>
+        <!-- 重置密码 -->
+        <activity android:name="com.gzqining.inthegarden.act.ResetPWActivity" >
+        </activity>
+        <!-- 个人信息 -->
+        <activity android:name="com.gzqining.inthegarden.act.MyInfoActivity" >
+        </activity>
+        <!-- 完善资料 -->
+        <activity android:name="com.gzqining.inthegarden.act.ImproveInfoActivity" >
+        </activity>
+        <!-- 关系 -->
+        <activity android:name="com.gzqining.inthegarden.act.RelationOfMineActivity" >
+        </activity>
+        <!-- 昵称设置 -->
+        <activity android:name="com.gzqining.inthegarden.act.NickNameSetActivity" >
+        </activity>
+        <!-- 具体信息 -->
+        <activity android:name="com.gzqining.inthegarden.act.SpecificInfoActivity" >
+        </activity>
+        <!-- 具体信息已经注册 -->
+        <activity android:name="com.gzqining.inthegarden.act.SpecificInfoActivityed" >
+        </activity>
+        <!-- 签名设置 -->
+        <activity android:name="com.gzqining.inthegarden.act.SignSetActivity" >
+        </activity>
+        <!-- 电话设置 -->
+        <activity android:name="com.gzqining.inthegarden.act.PhoneSetActivity" >
+        </activity>
+        <!-- 系统设置 -->
+        <activity android:name="com.gzqining.inthegarden.act.SystemSetupActivity" >
+        </activity>
+        <!-- 消息设置 -->
+        <activity android:name="com.gzqining.inthegarden.act.NewsSetupActivity" >
+        </activity>
+        <!-- 个人主页 -->
+        <activity android:name="com.gzqining.inthegarden.gridview.PersonActivity" >
+        </activity>
+        <!-- clear_news_dialog -->
+        <activity
+            android:name="com.gzqining.inthegarden.dialog.Clearn_News_Dialog"
+            android:theme="@style/MyDialog" >
+        </activity>
+        <!-- gift_dialog -->
+        <activity
+            android:name="com.gzqining.inthegarden.dialog.giftDialog"
+            android:theme="@style/MyDialog" >
+        </activity>
+        <!-- 买断gift_dialog -->
+        <activity
+            android:name="com.gzqining.inthegarden.dialog.maiduanGiftDialog"
+            android:theme="@style/MyDialog" >
+        </activity>
+        <!-- 买断礼物列表 -->
+        <activity android:name="com.gzqining.inthegarden.act.maiduanGiftListActivity" >
+        </activity>
+        <!-- 钱包 -->
+        <activity android:name="com.gzqining.inthegarden.act.WalletActivity" >
+        </activity>
+        <!-- 支付方式 -->
+        <activity android:name="com.gzqining.inthegarden.act.PayMoneyWayActivity" >
+        </activity>
+        <!-- 填写银行卡信息 -->
+        <activity android:name="com.gzqining.inthegarden.act.BankSetActivity" >
+        </activity>
+        <!-- 账号礼物 -->
+        <activity android:name="com.gzqining.inthegarden.act.presentWalletListActivity" >
+        </activity>
+        <!-- 关于在花园 -->
+        <activity android:name="com.gzqining.inthegarden.act.AboutIntheGardenActivity" >
+        </activity>
+        <!-- 意见反馈 -->
+        <activity android:name="com.gzqining.inthegarden.act.SuggestionActivity" >
+        </activity>
+        <!-- 我的粉丝 -->
+        <activity android:name="com.gzqining.inthegarden.act.MyFansActivity" >
+        </activity>
+        <!-- 买断记录 -->
+        <activity android:name="com.gzqining.inthegarden.act.maiduanRecordActivity" >
+        </activity>
+        <!-- 收支明细 -->
+        <activity android:name="com.gzqining.inthegarden.act.moneyDetailsActivity" >
+        </activity>
+        <!-- 自定义的聊天界面 -->
+        <activity
+            android:name="com.gzqining.inthegarden.act.ChatConversationActivity"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.gzqining.inthegarden"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!-- 我的关注 -->
+        <activity android:name="com.gzqining.inthegarden.act.MyAttentionActivity" >
+        </activity>
+        <!-- 我的相册 -->
+        <activity android:name="com.gzqining.inthegarden.act.MyAlbumActivity" >
+        </activity>
+        <!-- 加面具 -->
+        <activity android:name="com.gzqining.inthegarden.act.AlbumAddpwActivity" >
+        </activity>
+        <!-- 余额 -->
+        <activity android:name="com.gzqining.inthegarden.act.BalanceActivity" >
+        </activity>
+        <!-- 提现方式 -->
+        <activity android:name="com.gzqining.inthegarden.act.WithdrawalsActivity" >
+        </activity>
+        <!-- vip -->
+        <activity android:name="com.gzqining.inthegarden.act.VipActivity" >
+        </activity>
+        <!-- 查看vip特权 -->
+        <activity android:name="com.gzqining.inthegarden.act.VipPrivilegeActivity" >
+        </activity>
+        <!-- 升级vip -->
+        <activity android:name="com.gzqining.inthegarden.act.VipUpgradeActivity" >
+        </activity>
+        <activity android:name="com.gzqining.inthegarden.act.BeginViewActivity" />
+        <!-- 注册页 -->
+        <activity android:name="com.gzqining.inthegarden.act.RegisterActivity" />
+        <activity android:name="com.gzqining.inthegarden.act.DateActivity" />
+        <!-- 用户协议 -->
+        <activity android:name="com.gzqining.inthegarden.act.UserRuleActivity" />
+        <!-- 相册选择上传页 -->
+        <activity android:name="com.gzqining.inthegarden.album.albumSelect" />
+        <activity android:name="com.gzqining.inthegarden.logic.ImgFileListActivity" />
+
+        <!-- 融云demo activity 开始 -->
+        <activity
+            android:name="io.rong.imkit.demo.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="io.rong.imkit.demo.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.demo.GroupListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.demo.TestFragmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.demo.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.demo.TestFragment2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.demo.BlackListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="io.rong.imkit.demo.UserInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="io.rong.imkit.demo.CustomServiceActivity"
+            android:label="@string/title_activity_setting" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.gzqining.inthegarden"
+                    android:pathPrefix="/conversation/customer_service"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.rong.imkit.demo.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="io.rong.imkit.demo.DemoNotificationCycleSettingActivity" />
+        <!-- 支付宝SDK -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <!-- 支付宝结束 -->
+        <!-- 融云demo activity 结束 -->
+
+
+        <!-- Begin Rong Cloud -->
+        <!-- 融云 Rong Cloud App Key 设置开始 -->
+
+        <meta-data
+            android:name="RONG_CLOUD_APP_KEY"
+            android:value="kj7swf8o7c162" />
+        <!-- 融云 Rong Cloud App Key 设置结束 -->
+        <service android:name="io.rong.imlib.RongService" />
+        <!-- 礼物和邀约选择 -->
+        <activity
+            android:name="com.gzqining.inthegarden.act.giftAndMaiDuanActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.gzqining.inthegarden"
+                    android:pathPrefix="/conversationsetting/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!-- 礼物列表 -->
+        <activity android:name="com.gzqining.inthegarden.act.giftListActivity" >
+        </activity>
+        <!-- 买断设置 -->
+        <activity android:name="com.gzqining.inthegarden.act.maiDuanActivity" >
+        </activity>
+        <activity
+            android:name="io.rong.imkit.RongActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.gzqining.inthegarden"
+                    android:path="/grouplist"
+                    android:scheme="rong" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.gzqining.inthegarden"
+                    android:path="/conversationgrouplist"
+                    android:scheme="rong" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.gzqining.inthegarden"
+                    android:pathPrefix="/friend/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.rong.imkit.RongSingleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.gzqining.inthegarden"
+                    android:path="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!--
+        <activity
+            android:name="io.rong.imkit.RongSecActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.gzqining.inthegarden"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        -->
+
+        <activity
+            android:name="io.rong.voipkit.activity.CallSideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.voipkit.activity.CalledSideActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="io.rong.voipkit.calledSideActivity.action" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.gzqining.inthegarden"
+                    android:path="/calledsideactivity"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="io.rong.imkit.service.RongIMService"
+            android:enabled="true"
+            android:exported="false"
+            android:priority="1000" >
+        </service>
+        <service
+            android:name="io.rong.imlib.push.PushService"
+            android:process="io.rong.push" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="io.rong.push" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="io.rong.imlib.push.CommandService"
+            android:process="io.rong.push" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="io.rong.command" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="io.rong.imlib.push.PushReceiver"
+            android:process="io.rong.push" >
+            <intent-filter>
+                <action android:name="io.rong.imlib.action.push.heartbeat" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="io.rong.imlib.push.PushMessageReceiver" >
+            <intent-filter>
+                <action android:name="io.rong.push.message" />
+            </intent-filter>
+        </receiver>
+        <!-- End Rong Cloud -->
+        <!-- 设置百度地图的appkey -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="u7GEpUIbVYNM6i8T81IIDBrm" />
+
+        <!-- 声明sdk所需的service -->
+        <service android:name="com.easemob.chat.EMChatService" />
+        <!-- 在application标签中声明service组件,每个app拥有自己单独的定位service -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:XListView="http://schemas.android.com/apk/res/com.gzqining.inthegarden"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:orientation="vertical" >
+	<RelativeLayout
+        android:id="@+id/register_top"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#E51C52" >
+        
+            <ImageButton
+	            android:id="@+id/top_layout_register_back_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="fill_parent"
+	            android:layout_centerVertical="true"
+	            android:background="@null"
+	            android:contentDescription="@string/app_name"
+	            android:paddingLeft="18dp"
+	            android:paddingRight="18dp"
+	            android:src="@drawable/back_btn" />
+			<RelativeLayout
+			    android:layout_width="wrap_content"
+		        android:layout_height="45dp"
+		        android:layout_centerInParent="true" >
+		        <RelativeLayout
+		            android:id="@+id/top_phone"
+				    android:layout_width="wrap_content"
+			        android:layout_height="45dp">
+		            <Button
+				        android:id="@+id/register_phone_btn"
+				        android:layout_width="80dp"
+				        android:layout_height="40dp"
+			    		android:background="@drawable/tab_phone_bg"
+			    		android:onClick="topClicked"
+				        android:text="手机"
+				        android:textColor="@color/main_botton_text_color" />
+	            </RelativeLayout>
+
+	            <RelativeLayout
+	                android:id="@+id/top_email"
+				    android:layout_width="wrap_content"
+			        android:layout_height="45dp"
+			        android:layout_toRightOf="@id/top_phone">
+		            <Button
+				        android:id="@+id/register_email_btn"
+				        android:layout_width="80dp"
+				        android:layout_height="40dp"
+				        android:onClick="topClicked"
+			    		android:background="@drawable/tab_email_bg"
+				        android:text="邮箱"
+				        android:textColor="@color/main_botton_text_color" />
+	            </RelativeLayout>
+            </RelativeLayout>
+    </RelativeLayout>
+	<RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_bottom" />
+</LinearLayout>

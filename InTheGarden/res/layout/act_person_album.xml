@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bottom_bar_normal_bg"
+    android:orientation="vertical" >
+
+    <com.gzqining.inthegarden.common.TopBarLayout
+        android:id="@+id/topbarlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        title="相册" >
+
+        <ImageButton
+            android:id="@+id/top_layout_album_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/back_btn" />
+
+        <ImageButton
+            android:id="@+id/top_layout_album_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/search_add" />
+    </com.gzqining.inthegarden.common.TopBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshGridView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/my_person_album_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:clipChildren="true"
+            android:gravity="center"
+            android:horizontalSpacing="3dip"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="1dip"
+            android:visibility="visible"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrHeaderBackground="@null"
+            ptr:ptrHeaderSubTextColor="#ffffff"
+            ptr:ptrHeaderTextColor="#ffffff"
+            ptr:ptrListViewExtrasEnabled="false"
+            ptr:ptrMode="both"
+            ptr:ptrRefreshableViewBackground="@null"
+            ptr:ptrScrollingWhileRefreshingEnabled="true" >
+
+            <!-- 刷新箭头显示，设置则在页面内有显示 -->
+            <!-- ptr:ptrShowIndicator="true" -->
+        </com.handmark.pulltorefresh.library.PullToRefreshGridView>
+
+        <RelativeLayout
+            android:id="@+id/menu_album"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_bottom_bar_normal_bg"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp" >
+
+                <Button
+                    android:id="@+id/takephoto_album"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/login_phonespw_bg"
+                    android:gravity="center"
+                    android:text="拍照"
+                    android:textColor="#000000" />
+
+                <View
+                    android:id="@+id/line_album"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/takephoto_album"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#666666" />
+
+                <Button
+                    android:id="@+id/album_choose_from_album"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/line_album"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/login_emailspw_bg"
+                    android:gravity="center"
+                    android:text="从手机相册选择"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/cancel_myalbum"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/album_choose_from_album"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/login_cancel_bg"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="#000000" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/image_no_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/nophoto"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

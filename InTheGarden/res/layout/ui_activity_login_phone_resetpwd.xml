@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_content_bg"
+    android:orientation="vertical"
+    android:padding="16dp" >
+
+    <Button
+        android:id="@+id/phonespw"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_phonespw_bg"
+        android:text="手机找回密码"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/emailspw"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/login_emailspw_bg"
+        android:text="邮箱找回密码"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/cancel_login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_cancel_bg"
+        android:text="取消"
+        android:textColor="#000000" />
+
+</LinearLayout>

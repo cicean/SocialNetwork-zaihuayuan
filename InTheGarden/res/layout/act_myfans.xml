@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:XListView="http://schemas.android.com/apk/res/com.gzqining.inthegarden"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_content_bg" >
+
+    <com.gzqining.inthegarden.common.TopBarLayout
+        android:id="@+id/topbarlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        title="我的粉丝" >
+		<ImageButton
+            android:id="@+id/top_layout_myfans_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/back_btn" />
+    </com.gzqining.inthegarden.common.TopBarLayout>
+    
+    <com.gzqining.inthegarden.waterflow.XListView
+        android:id="@+id/fans_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        XListView:plaColumnNumber="1"
+        android:fastScrollEnabled="true"
+        android:scrollbars="vertical"
+        android:visibility="visible" />
+    <ImageView 
+        android:id="@+id/image_no_fans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:src="@drawable/nofans"
+        android:visibility="gone" />
+
+</LinearLayout>
